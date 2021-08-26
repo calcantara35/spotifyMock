@@ -31,6 +31,7 @@
 		F5A131E926D7F5B200110A1D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131E826D7F5B200110A1D /* Artist.swift */; };
 		F5A131EB26D7F5C500110A1D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131EA26D7F5C500110A1D /* UserProfile.swift */; };
 		F5A131ED26D7FF8C00110A1D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131EC26D7FF8C00110A1D /* Extensions.swift */; };
+		F5A131EF26D8234B00110A1D /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131EE26D8234B00110A1D /* AuthResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		F5A131E826D7F5B200110A1D /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F5A131EA26D7F5C500110A1D /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		F5A131EC26D7FF8C00110A1D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F5A131EE26D8234B00110A1D /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				F5A131E626D7F5AB00110A1D /* AudioTrack.swift */,
 				F5A131E826D7F5B200110A1D /* Artist.swift */,
 				F5A131EA26D7F5C500110A1D /* UserProfile.swift */,
+				F5A131EE26D8234B00110A1D /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				F5A131CD26D7EBE400110A1D /* LibraryViewController.swift in Sources */,
 				F5A131C926D7EB6B00110A1D /* TabBarViewController.swift in Sources */,
 				F5A131E926D7F5B200110A1D /* Artist.swift in Sources */,
+				F5A131EF26D8234B00110A1D /* AuthResponse.swift in Sources */,
 				F5A131AE26D7E8C100110A1D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
