@@ -30,6 +30,7 @@
 		F5A131E726D7F5AB00110A1D /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131E626D7F5AB00110A1D /* AudioTrack.swift */; };
 		F5A131E926D7F5B200110A1D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131E826D7F5B200110A1D /* Artist.swift */; };
 		F5A131EB26D7F5C500110A1D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131EA26D7F5C500110A1D /* UserProfile.swift */; };
+		F5A131ED26D7FF8C00110A1D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131EC26D7FF8C00110A1D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F5A131E626D7F5AB00110A1D /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		F5A131E826D7F5B200110A1D /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F5A131EA26D7F5C500110A1D /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F5A131EC26D7FF8C00110A1D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				F5A131AB26D7E8C100110A1D /* AppDelegate.swift */,
 				F5A131AD26D7E8C100110A1D /* SceneDelegate.swift */,
 				F5A131B726D7E8C200110A1D /* Assets.xcassets */,
+				F5A131EC26D7FF8C00110A1D /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				F5A131DF26D7F53000110A1D /* AuthManager.swift in Sources */,
 				F5A131DB26D7F4F700110A1D /* PlaylistViewController.swift in Sources */,
 				F5A131DD26D7F50E00110A1D /* SearchResultsViewController.swift in Sources */,
+				F5A131ED26D7FF8C00110A1D /* Extensions.swift in Sources */,
 				F5A131E126D7F58100110A1D /* APICaller.swift in Sources */,
 				F5A131E326D7F58B00110A1D /* HapticsManager.swift in Sources */,
 				F5A131B026D7E8C100110A1D /* HomeViewController.swift in Sources */,
