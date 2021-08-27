@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F58B62D426D97E40006D27FA /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B62D326D97E40006D27FA /* SettingsModels.swift */; };
 		F5A131AC26D7E8C100110A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131AB26D7E8C100110A1D /* AppDelegate.swift */; };
 		F5A131AE26D7E8C100110A1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131AD26D7E8C100110A1D /* SceneDelegate.swift */; };
 		F5A131B026D7E8C100110A1D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131AF26D7E8C100110A1D /* HomeViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F58B62D326D97E40006D27FA /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		F5A131A826D7E8C100110A1D /* SpotifyMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A131AB26D7E8C100110A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A131AD26D7E8C100110A1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				F5A131E826D7F5B200110A1D /* Artist.swift */,
 				F5A131EA26D7F5C500110A1D /* UserProfile.swift */,
 				F5A131EE26D8234B00110A1D /* AuthResponse.swift */,
+				F58B62D326D97E40006D27FA /* SettingsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				F5A131E726D7F5AB00110A1D /* AudioTrack.swift in Sources */,
 				F5A131EB26D7F5C500110A1D /* UserProfile.swift in Sources */,
 				F5A131CB26D7EBD200110A1D /* SearchViewController.swift in Sources */,
+				F58B62D426D97E40006D27FA /* SettingsModels.swift in Sources */,
 				F5A131B626D7E8C100110A1D /* SpotifyMock.xcdatamodeld in Sources */,
 				F5A131D526D7F4D400110A1D /* SettingsViewController.swift in Sources */,
 				F5A131DF26D7F53000110A1D /* AuthManager.swift in Sources */,

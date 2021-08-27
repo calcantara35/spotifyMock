@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "236B76FB-A8A5-410F-83F5-9A20A6A4CA7E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3EE65DB-9356-4719-836C-175908267426"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyMock/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getCurrentUserProfile(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48E95CFC-EB70-4A03-B607-6FF95472A4E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyMock/Controllers/Other/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "48E95CFC-EB70-4A03-B607-6FF95472A4E4 - c0acf72f28602960"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyMock.ProfileViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "SpotifyMock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cesaralcantara/Desktop/Desktop%20-%20Cesar%E2%80%99s%20MacBook%20Pro/dev/SpotifyMock/SpotifyMock/Controllers/Other/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "48E95CFC-EB70-4A03-B607-6FF95472A4E4 - dd20bdad30896c57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;SpotifyMock.UserProfile, Swift.Error&gt;) -&gt; () in SpotifyMock.ProfileViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "SpotifyMock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cesaralcantara/Desktop/Desktop%20-%20Cesar%E2%80%99s%20MacBook%20Pro/dev/SpotifyMock/SpotifyMock/Controllers/Other/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91845704-E179-4E09-A74F-F033CA12EA4C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyMock/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "createRequest(with:type:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "91845704-E179-4E09-A74F-F033CA12EA4C - feb836b0a260f165"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyMock.APICaller.createRequest(with: Swift.Optional&lt;Foundation.URL&gt;, type: SpotifyMock.APICaller.HTTPMethod, completion: (Foundation.URLRequest) -&gt; ()) -&gt; ()"
+                  moduleName = "SpotifyMock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cesaralcantara/Desktop/Desktop%20-%20Cesar%E2%80%99s%20MacBook%20Pro/dev/SpotifyMock/SpotifyMock/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "91845704-E179-4E09-A74F-F033CA12EA4C - ce064bb4d8ea635f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in SpotifyMock.APICaller.createRequest(with: Swift.Optional&lt;Foundation.URL&gt;, type: SpotifyMock.APICaller.HTTPMethod, completion: (Foundation.URLRequest) -&gt; ()) -&gt; ()"
+                  moduleName = "SpotifyMock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cesaralcantara/Desktop/Desktop%20-%20Cesar%E2%80%99s%20MacBook%20Pro/dev/SpotifyMock/SpotifyMock/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "360">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
