@@ -23,54 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "48E95CFC-EB70-4A03-B607-6FF95472A4E4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpotifyMock/Controllers/Other/ProfileViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "48E95CFC-EB70-4A03-B607-6FF95472A4E4 - c0acf72f28602960"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpotifyMock.ProfileViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "SpotifyMock"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cesaralcantara/Desktop/Desktop%20-%20Cesar%E2%80%99s%20MacBook%20Pro/dev/SpotifyMock/SpotifyMock/Controllers/Other/ProfileViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "208">
-               </Location>
-               <Location
-                  uuid = "48E95CFC-EB70-4A03-B607-6FF95472A4E4 - dd20bdad30896c57"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;SpotifyMock.UserProfile, Swift.Error&gt;) -&gt; () in SpotifyMock.ProfileViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "SpotifyMock"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cesaralcantara/Desktop/Desktop%20-%20Cesar%E2%80%99s%20MacBook%20Pro/dev/SpotifyMock/SpotifyMock/Controllers/Other/ProfileViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "91845704-E179-4E09-A74F-F033CA12EA4C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
