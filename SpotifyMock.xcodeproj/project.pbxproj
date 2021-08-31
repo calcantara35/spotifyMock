@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C270EC198657D17EA2675692 /* Pods_SpotifyMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12AC1F2924A21D4398F22411 /* Pods_SpotifyMock.framework */; };
+		F50DC81026DEB9D200848DC7 /* NewReleasesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DC80F26DEB9D200848DC7 /* NewReleasesResponse.swift */; };
+		F50DC81226DEBAC300848DC7 /* APIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DC81126DEBAC300848DC7 /* APIImage.swift */; };
+		F50DC81426DEBC2000848DC7 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DC81326DEBC2000848DC7 /* Album.swift */; };
 		F58B62D426D97E40006D27FA /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B62D326D97E40006D27FA /* SettingsModels.swift */; };
 		F5A131AC26D7E8C100110A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131AB26D7E8C100110A1D /* AppDelegate.swift */; };
 		F5A131AE26D7E8C100110A1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A131AD26D7E8C100110A1D /* SceneDelegate.swift */; };
@@ -40,6 +43,9 @@
 		12AC1F2924A21D4398F22411 /* Pods_SpotifyMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E66B478EAD23645936EE31 /* Pods-SpotifyMock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyMock.debug.xcconfig"; path = "Target Support Files/Pods-SpotifyMock/Pods-SpotifyMock.debug.xcconfig"; sourceTree = "<group>"; };
 		615F647DB35431BCC9A53F37 /* Pods-SpotifyMock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyMock.release.xcconfig"; path = "Target Support Files/Pods-SpotifyMock/Pods-SpotifyMock.release.xcconfig"; sourceTree = "<group>"; };
+		F50DC80F26DEB9D200848DC7 /* NewReleasesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesResponse.swift; sourceTree = "<group>"; };
+		F50DC81126DEBAC300848DC7 /* APIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImage.swift; sourceTree = "<group>"; };
+		F50DC81326DEBC2000848DC7 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		F58B62D326D97E40006D27FA /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		F5A131A826D7E8C100110A1D /* SpotifyMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A131AB26D7E8C100110A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +102,6 @@
 				24E66B478EAD23645936EE31 /* Pods-SpotifyMock.debug.xcconfig */,
 				615F647DB35431BCC9A53F37 /* Pods-SpotifyMock.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,6 +156,9 @@
 				F5A131EA26D7F5C500110A1D /* UserProfile.swift */,
 				F5A131EE26D8234B00110A1D /* AuthResponse.swift */,
 				F58B62D326D97E40006D27FA /* SettingsModels.swift */,
+				F50DC80F26DEB9D200848DC7 /* NewReleasesResponse.swift */,
+				F50DC81126DEBAC300848DC7 /* APIImage.swift */,
+				F50DC81326DEBC2000848DC7 /* Album.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,7 +343,9 @@
 				F5A131CB26D7EBD200110A1D /* SearchViewController.swift in Sources */,
 				F58B62D426D97E40006D27FA /* SettingsModels.swift in Sources */,
 				F5A131B626D7E8C100110A1D /* SpotifyMock.xcdatamodeld in Sources */,
+				F50DC81226DEBAC300848DC7 /* APIImage.swift in Sources */,
 				F5A131D526D7F4D400110A1D /* SettingsViewController.swift in Sources */,
+				F50DC81026DEB9D200848DC7 /* NewReleasesResponse.swift in Sources */,
 				F5A131DF26D7F53000110A1D /* AuthManager.swift in Sources */,
 				F5A131DB26D7F4F700110A1D /* PlaylistViewController.swift in Sources */,
 				F5A131DD26D7F50E00110A1D /* SearchResultsViewController.swift in Sources */,
@@ -350,6 +360,7 @@
 				F5A131D126D7F4AD00110A1D /* AuthViewController.swift in Sources */,
 				F5A131CD26D7EBE400110A1D /* LibraryViewController.swift in Sources */,
 				F5A131C926D7EB6B00110A1D /* TabBarViewController.swift in Sources */,
+				F50DC81426DEBC2000848DC7 /* Album.swift in Sources */,
 				F5A131E926D7F5B200110A1D /* Artist.swift in Sources */,
 				F5A131EF26D8234B00110A1D /* AuthResponse.swift in Sources */,
 				F5A131AE26D7E8C100110A1D /* SceneDelegate.swift in Sources */,
