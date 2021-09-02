@@ -30,8 +30,8 @@
             filePath = "SpotifyMock/Managers/APICaller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "createRequest(with:type:completion:)"
             landmarkType = "7">
             <Locations>
