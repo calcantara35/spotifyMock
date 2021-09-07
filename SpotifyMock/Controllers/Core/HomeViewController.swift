@@ -8,9 +8,9 @@
 import UIKit
 
 enum BrowseSectionType {
-    case newReleases // 1
-    case featuredPlaylists // 2
-    case recommendedTracks // 3
+    case newReleases(viewModels: [NewReleasesCellViewModel]) // 1
+    case featuredPlaylists(viewModels: [NewReleasesCellViewModel]) // 2
+    case recommendedTracks(viewModels: [NewReleasesCellViewModel]) // 3
 }
 
 class HomeViewController: UIViewController {
@@ -25,7 +25,9 @@ class HomeViewController: UIViewController {
         spinner.hidesWhenStopped = true
         return spinner
     }()
-
+    
+    private var sections = [BrowseSectionType]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +47,11 @@ class HomeViewController: UIViewController {
         fetchData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        fetchData()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
@@ -53,7 +60,12 @@ class HomeViewController: UIViewController {
     // MARK: - Configure the Collection View
     private func configureCollectionView() {
         view.addSubview(collectionView)
+        
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(NewReleaseCollectionViewCell.self, forCellWithReuseIdentifier: NewReleaseCollectionViewCell.identifier)
+        collectionView.register(FeaturedPlaylistCollectionViewCell.self, forCellWithReuseIdentifier: FeaturedPlaylistCollectionViewCell.identifier)
+        collectionView.register(RecommendedTrackCollectionViewCell.self, forCellWithReuseIdentifier: RecommendedTrackCollectionViewCell.identifier)
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
@@ -61,11 +73,45 @@ class HomeViewController: UIViewController {
     
     // MARK: - API Call
     private func fetchData() {
+        
+        // dispatch group -> group multiple dispatch concurrent operations, currency of multiple api calls
+        let group = DispatchGroup()
+        group.enter()
+        group.enter()
+        group.enter()
+        
+        var newReleases: NewReleasesResponse?
+        var featuredPlaylist: FeaturedPlaylistResponse?
+        var recommendations: RecommendationsResponse?
         // New Releases
+        APICaller.shared.getAllNewReleases { result in
+            defer {
+                group.leave()
+            }
+            switch result {
+            case .success(let model):
+                newReleases = model
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        
         // Featured Playlist
+        APICaller.shared.getFeaturedPlaylist { result in
+            defer {
+                group.leave()
+            }
+            switch result {
+            case .success(let model):
+                featuredPlaylist = model
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        
         // Recommended Tracks
-        
-        
         APICaller.shared.getRecommendationsGenres { result in
             switch result {
             case .success(let model):
@@ -76,24 +122,57 @@ class HomeViewController: UIViewController {
                         seeds.insert(random)
                     }
                 }
-                APICaller.shared.getRecommendations(genres: seeds) { _ in
-                    
+                APICaller.shared.getRecommendations(genres: seeds) { recommendedResults in
+                    defer {
+                        group.leave()
+                    }
+                    switch recommendedResults {
+                    case .success(let model):
+                        recommendations = model
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
                 }
             case .failure(let error):
-                break
-            }
+                print(error.localizedDescription)
             }
         }
-//        APICaller.shared.getAllNewReleases { result in
-//            switch result {
-//            case .success(let model):
-//                print(model)
-//                break
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//                break
-//            }
-//        }
+        
+        group.notify(queue: .main) {
+            // unwrap all responses
+            guard let newAlbums = newReleases?.albums.items,
+                  let playlists = featuredPlaylist?.playlists.items,
+                  let tracks = recommendations?.tracks else {
+                return
+            }
+            self.configureModels(
+                newAlbums: newAlbums,
+                playlists: playlists,
+                tracks: tracks
+            )
+        }
+    }
+    
+    // MARK: - Configure Models
+    private func configureModels
+    (
+        newAlbums: [Album],
+        playlists: [Playlist],
+        tracks: [AudioTrack]
+    ) {
+        // Configure models
+        // converting from the model to a view model type
+        sections.append(.newReleases(viewModels: newAlbums.compactMap({ album in
+            return NewReleasesCellViewModel(
+                name: album.name,
+                artworkUrl: URL(string: album.images.first?.url ?? ""),
+                numberOfTracks: album.total_tracks,
+                artistName: album.artists.first?.name ?? "-")
+        })))
+        sections.append(.featuredPlaylists(viewModels: []))
+        sections.append(.recommendedTracks(viewModels: []))
+        collectionView.reloadData()
+    }
     
     // MARK: - Settings Handler
     @objc func didTapSettings() {
@@ -111,23 +190,46 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     // MARK: - Data Source Functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        let type = sections[section]
+        switch type {
+        case .newReleases(let viewModels):
+            return viewModels.count
+        case .featuredPlaylists(let viewModels):
+            return viewModels.count
+        case .recommendedTracks(let viewModels):
+            return viewModels.count
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        if indexPath.section == 0 {
-            cell.backgroundColor = .systemGreen
-        } else if indexPath.section == 1 {
-            cell.backgroundColor = .red
-        } else if indexPath.section == 2 {
+        
+        let type = sections[indexPath.section]
+        switch type {
+        case .newReleases(let viewModels):
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewReleaseCollectionViewCell.identifier, for: indexPath) as? NewReleaseCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            let viewModel = viewModels[indexPath.row]
+            cell.configure(with: viewModel)
+            return cell
+        case .featuredPlaylists(let viewModels):
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeaturedPlaylistCollectionViewCell.identifier, for: indexPath) as? FeaturedPlaylistCollectionViewCell else {
+                return UICollectionViewCell()
+            }
             cell.backgroundColor = .blue
+            return cell
+        case .recommendedTracks(let viewModels):
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendedTrackCollectionViewCell.identifier, for: indexPath) as? RecommendedTrackCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.backgroundColor = .orange
+            return cell
         }
-        return cell
+        
     }
     
     // MARK: - Delegate Functions
