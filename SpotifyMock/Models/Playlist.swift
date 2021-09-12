@@ -16,8 +16,3 @@ struct Playlist: Codable {
     let owner: User
     
 }
-
-struct User: Codable {
-    let id: String
-    let external_urls: [String: String]
-}
